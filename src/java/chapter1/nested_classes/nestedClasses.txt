@@ -1,0 +1,65 @@
+Nested classes can be of four types:
+
+    - Inner class: A non-static type defined at the member level of a class
+    - Static Inner class: A static type defined at the member level of a class
+    - Local class: A class defined within a method body
+    - Anonymous class: A special case of a local class that does not a name
+
+Attention:
+    interfaces and enums cannot be declared as local or anonymous classes
+
+
+=================
+Inner class
+=================
+
+    (!) Can be declared public, protected, package-private (default), or private
+    (!) Can extend any class and implement interfaces
+    (!) Can be marked abstract or final
+    (!) Cannot declare static fields or methods, except for static final fields
+    (!) Can access members of the outer class including private members
+
+=====================
+static Nested class
+=====================
+
+    (!) The nesting creates a namespace because the enclosing class name must be used to refer to it.
+    (!) It can be made private or use one of the other access modifiers to encapsulate it.
+    (!) The enclosing class can refer to the fields and methods of the static nested class.
+
+====================
+Local class
+====================
+
+    local classes are like local variables - created inside a method, constructor, initializer.
+    and they go out of the scope when method ends
+
+     (!) They do not have an access modifier.
+     (!) They cannot be declared static and cannot declare static fields or methods, except for static final fields.
+     (!) They have access to all fields and methods of the enclosing class (when defined in an instance method).
+     (!) They can access local variables if the variables are final or effectively final.
+
+        -> effectively final - local variable whose value does not change after it is set
+
+===================
+Anonymous class
+===================
+
+    a class that is defined right in a way
+    always extends some other class or interface
+
+    public class Example {
+
+        interface Animal {
+            void eat();
+        }
+
+        Animal bird = new Animal() { // <--- anonymous class
+            public void eat() {
+                System.out.println("Birds eat using their beak");
+            }
+        };
+
+    }
+
+    (!) Requires a semicolon ; in the end of the initialization
