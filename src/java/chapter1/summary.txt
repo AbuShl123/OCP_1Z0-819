@@ -1,0 +1,77 @@
+=======================================
+Summary
+=======================================
+This chapter focused on core fundamentals of the Java language that you will use throughout this book. We
+started with the final modifier and showed how it could be applied to local, instance, and static
+variables, as well as methods and classes.
+We next moved on to enumerated types, which define a list of fixed values. Like boolean values, enums
+are not integers and cannot be compared this way. Enums can be used in switch statements. Besides the
+list of values, enums can include instance variables, constructors, and methods. Methods can even be
+abstract, in which case all enum values must provide an implementation. Alternatively, if an enum
+method is not marked final, then it can be overridden by one of its value declarations.
+There are four types of nested classes. An inner class requires an instance of the outer class to use, while a
+static nested class does not. A local class is one defined within a method. Local classes can access final
+and effectively final local variables. Anonymous classes are a special type of local class that does not have
+a name. Anonymous classes are required to extend exactly one class by name or implement exactly one
+interface. Inner, local, and anonymous classes can access private members of the class in which they
+are defined, provided the latter two are used inside an instance method.
+As of Java 9, interfaces now support six different members. Constant variables (static final) and
+abstract methods should have been familiar to you. Newer member types include default, static,
+private, and private static methods. While interfaces now contain a lot of member types, they are still
+distinct from abstract classes and do not participate in the class instantiation.
+Last but certainly not least, this chapter included an introduction to functional interfaces and lambda
+expressions. A functional interface is an interface that contains exactly one abstract method. Any
+functional interface can be implemented with a lambda expression. A lambda expression can be written in
+a number of different forms, since many of the parts are optional. Make sure you understand the basics of
+writing lambda expressions as you will be using them throughout the book.
+
+======================================
+Exam Essentials
+======================================
+
+1. Be able to correctly apply the final modifier. Applying the final modifier to a variable means its
+value cannot change after it has been assigned, although its contents can be modified. An instance
+final variable must be assigned a value when it is declared, in an instance initializer, or in a
+constructor at most once. A static final variable must be assigned a value when it is declared or in
+a static initializer. A final method is one that cannot be overridden by a subclass, while a final
+class is one that cannot be extended.
+
+2. Be able to create and use enum types. An enum is a data structure that defines a list of values. If the
+enum does not contain any other elements, then the semicolon (;) after the values is optional. An
+enum can have instance variables, constructors, and methods. Enum constructors are implicitly
+private. Enums can include methods, both as members or within individual enum values. If the enum
+declares an abstract method, each enum value must implement it.
+
+3. Identify and distinguish between types of nested classes. There are four types of nested types: inner
+classes, static classes, local classes, and anonymous classes. The first two are defined as part of a
+class declaration. Local classes are used inside method bodies and scoped to the end of the current
+block of code. Anonymous classes are created and used once, often on the fly. More recently, they are
+commonly implemented as lambda expressions.
+
+4. Be able to declare and use nested classes. Instantiating an inner class requires an instance of the
+outer class, such as calling new Outer.new Inner(). On the other hand, static nested classes can be
+created without a reference to the outer class, although they cannot access instance members of the
+outer class without a reference. Local and anonymous classes cannot be declared with an access
+modifier. Anonymous classes are limited to extending a single class or implementing one interface.
+
+5. Be able to create default, static, private, and private static interface methods. A default interface
+method is a public interface that contains a body, which can be overridden by a class implementing
+the interface. If a class inherits two default methods with the same signature, then the class must
+override the default method with its own implementation. An interface can include public static
+and private static methods, the latter of which can be accessed only by methods declared within
+the interface. An interface can also include private methods, which can be called only by default
+and other private methods in the interface declaration.
+
+6. Determine whether an interface is a functional interface. Use the single abstract method (SAM)
+rule to determine whether an interface is a functional interface. Other interface method types
+(default, private, static, and private static) do not count toward the single abstract method
+count, nor do any public methods with signatures found in Object.
+
+7. Write simple lambda expressions. Look for the presence or absence of optional elements in lambda
+code. Parameter types are optional. Braces and the return keyword are optional when the body is a
+single statement. Parentheses are optional when only one parameter is specified and the type is
+implicit. If one of the parameters is a var, then they all must use var.
+
+8. Determine whether a variable can be used in a lambda body. Local variables and method
+parameters must be final or effectively final to be referenced in a lambda expression. Class variables
+are always allowed. Instance variables are allowed if the lambda is used inside an instance method.

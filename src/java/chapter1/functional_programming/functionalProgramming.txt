@@ -1,0 +1,45 @@
+Functional interface is the interface with single abstract method:
+
+@FunctionalInterface <-- this is optional 
+public interface Sprint {
+	void sprint();
+}
+
+
+It is also a common practice to add annotation @FunctionalInterface, but this is optional
+
+From the following which are functional interfaces? 
+```
+public interface Dash extends Sprint {}
+
+public interface Skip extends Sprint {
+ void skip();
+}
+
+public interface Sleep {
+ private void snore() {}
+ default int getZzz() { return 1; }
+}
+
+public interface Climb {
+ void reach();
+ default void fall() {}
+ static int getBackUp() { return 100; }
+ private static boolean checkHeight() { return true; }
+}
+```
+Answer: Dash is functional interface, since it inherits single abstract method sprint() 
+	Skip is NOT fi, because it has two abstract methods: one inherited one declared
+	Sleep is NOT fi, because it has no abstract methods
+	Clibm is fi, because it meets the criteria of having one single abstract method - reach()
+
+
+==============
+Lambda
+==============
+
+	1. when var is user inside a lambda parameter list, then all parameters should have 'var' as their types: 
+
+		(var a, var b, var c) -> a * 3.14159
+
+	2. lambdas can accept instance, local or static variables only if they are final or effectively final
