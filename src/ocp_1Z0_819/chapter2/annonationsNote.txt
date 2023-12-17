@@ -8,8 +8,8 @@ ________________________|
             ■ Declare custom annotations
 
 
-==================================
-Annotation Definition and purpose
+==================================                                                 ||   terminologies:
+Annotation Definition and purpose                                                  ||   marker annotation - an annotation without elements()
 ==================================
 
     Annotations are about metadata.
@@ -34,9 +34,32 @@ Annotation Definition and purpose
 Creating custom annotations
 ================================
 
-    (!) Annotations are created the following way:
+
+    (!) Annotations can also be created inside other classes.
+    (!) an annotation element without a default value is considered required
+    (!) Annotation elements are public abstract
+    (!) all just simple fields are public static final fields
+
             ``
-            public @interface AnnotationName {}
+            public @interface AnnotationName {
+                int fieldNumber();           // this will be required when using the annotation
+                int another() default 2;     // this one won't be required
+                int MIN_BOUNDARY = 12;       // can be accessed by other classes directly
+            }
             ``
 
-    (!) Usually annotations are created in their own files as a top-level type, but they can also be created inside a class declaration like an inner class
+
+    IMPORTANT: a default value of an annotation element must be a non-null constant expression!!
+    IMPORTANT: an annotation element cannot be just any type. It must be a primitive type, a Class, an Enum, another annotation, or one-dim array of these types
+
+            ``
+            public @interface BadAnnotation {
+                String name() default new String("");   // DOES NOT COMPILE (because not a compile-time constant)
+                String address() default "";
+                String default null;                    // DOES NOT COMPILE
+                Integer height();                       // DOES NOT COMPILE
+                String[][] generalInfo();               // DOES NOT COMPILE (just String[] would compile)
+                Exercise exercise() default @Exercise(hoursPerDay=2)
+            }
+            ``
+
