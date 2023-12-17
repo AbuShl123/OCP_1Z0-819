@@ -62,4 +62,3 @@ Creating custom annotations
                 Exercise exercise() default @Exercise(hoursPerDay=2)
             }
             ``
-
