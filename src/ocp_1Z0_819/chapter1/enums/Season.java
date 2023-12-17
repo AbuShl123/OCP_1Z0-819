@@ -1,4 +1,4 @@
-package org.abushl123.chapter1.enums;
+package java.chapter1.enums;
 
 public enum Season {
     // enum requires the list of values to be always declared first, even before the constructor

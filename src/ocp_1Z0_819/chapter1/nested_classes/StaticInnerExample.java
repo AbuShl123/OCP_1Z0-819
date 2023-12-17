@@ -1,4 +1,4 @@
-package org.abushl123.chapter1.nested_classes;
+package java.chapter1.nested_classes;
 
 public class StaticInnerExample {
     public static void main(String[] args) {
@@ -18,6 +18,6 @@ class Enclosing {
 }
 
 // if we were to import a nested static class two ways are acceptable:
-// import org.abushl123.chapter1.nested_classes.Enclosing.Nested;
-// import static org.abushl123.chapter1.nested_classes.Enclosing.Nested;
+// import java.chapter1.nested_classes.Enclosing.Nested;
+// import static java.chapter1.nested_classes.Enclosing.Nested;
 

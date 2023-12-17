@@ -1,4 +1,4 @@
-package org.abushl123.chapter1.enums;
+package java.chapter1.enums;
 
 public enum OnlyOne {
     ONCE(true);

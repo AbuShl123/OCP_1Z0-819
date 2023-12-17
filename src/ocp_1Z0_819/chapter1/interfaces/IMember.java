@@ -1,4 +1,4 @@
-package org.abushl123.chapter1.interfaces;
+package java.chapter1.interfaces;
 
 public interface IMember {
     // All interface member types:

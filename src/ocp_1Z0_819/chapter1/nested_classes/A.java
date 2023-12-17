@@ -1,4 +1,4 @@
-package org.abushl123.chapter1.nested_classes;
+package java.chapter1.nested_classes;
 
 public class A {
     private int x = 10;
