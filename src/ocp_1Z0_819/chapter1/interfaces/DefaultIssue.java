@@ -1,4 +1,4 @@
-package java.chapter1.interfaces;
+package ocp_1Z0_819.chapter1.interfaces;
 
 import java.io.IOException;
 

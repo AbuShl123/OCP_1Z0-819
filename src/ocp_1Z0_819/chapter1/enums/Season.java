@@ -1,4 +1,4 @@
-package java.chapter1.enums;
+package ocp_1Z0_819.chapter1.enums;
 
 public enum Season {
     // enum requires the list of values to be always declared first, even before the constructor
