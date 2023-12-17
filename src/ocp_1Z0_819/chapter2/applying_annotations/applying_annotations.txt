@@ -1,0 +1,12 @@
+Applying Annotations    |
+________________________|
+
+    Annotations can be applied to following declarations:
+
+        - classes, interfaces, enums and modules
+        - variables (static, instance, local)
+        - methods and constructors
+        - method, constructor, and lambda parameters
+        - cast expressions
+        - other annotations
+
