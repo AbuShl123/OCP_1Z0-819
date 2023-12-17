@@ -1,0 +1,42 @@
+Chapter 2 - Annotations |
+________________________|
+
+        Exams objectives covered in this chapter:
+            ■ Describe the purpose of annotations and typical usage patterns
+            ■ Apply annotations to classes and methods
+            ■ Describe commonly used annotations in the JDK
+            ■ Declare custom annotations
+
+
+==================================
+Annotation Definition and purpose
+==================================
+
+    Annotations are about metadata.
+        - metadata is data that provides information about other data
+
+    The purpose
+        of annotation is to design metadata attributes to classes, methods, variables and other Java types.
+
+    Annotation Basic Rules:
+        1) annotations function a lot like interfaces
+        2) annotations establish relationships that make it easier to manage data about our application
+        3) an annotation ascribes custom information on the declaration where it is defined
+        4) annotations are optional metadata and by themselves do not do anything
+
+    Explanation on some rules:
+        Rule No. 2: hard to explain. Just saves us from necessity to write additional extra classes
+        Rule No. 3: the same annotation can often be applied to completely different and unrelated classes or variables
+        Rule No. 4: if you take a project with thousands annotations and remove all of them, the code will still compile, albeit with different behaviour at runtime
+
+
+================================
+Creating custom annotations
+================================
+
+    (!) Annotations are created the following way:
+            ``
+            public @interface AnnotationName {}
+            ``
+
+    (!) Usually annotations are created in their own files as a top-level type, but they can also be created inside a class declaration like an inner class
