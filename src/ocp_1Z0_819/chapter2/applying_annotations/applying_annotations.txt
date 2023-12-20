@@ -10,3 +10,27 @@ ________________________|
         - cast expressions
         - other annotations
 
+
+-------------------------------------------------------
+
+
+    If the annotation has value() element and all other elements are not required, then the following is possible:
+
+            @AnnotationName("Value of the element")
+
+            - The annotation declaration must contain an element named value(), which may be optional or required.
+            - The annotation declaration must not contain any other elements that are required.
+            - The annotation usage must not provide values for any other elements.
+
+
+-------------------------------------------------------
+
+
+    It is also possible to omit {} when listing only one element for an array:
+
+        @AnnotationWithArray(array = "singleValue")
+
+        @AnnotationWithArray(array = {"a", "b", "c"})
+
+
+------------------------------------------------------

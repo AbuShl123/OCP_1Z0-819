@@ -38,7 +38,7 @@ Creating custom annotations
     (!) Annotations can also be created inside other classes.
     (!) an annotation element without a default value is considered required
     (!) Annotation elements are public abstract
-    (!) all just simple fields are public static final fields
+    (!) Fields are public static final variables
 
             ``
             public @interface AnnotationName {
@@ -49,7 +49,7 @@ Creating custom annotations
             ``
 
 
-    IMPORTANT: a default value of an annotation element must be a non-null constant expression!!
+    IMPORTANT: a defaulting value of an annotation element must be a non-null constant expression!!
     IMPORTANT: an annotation element cannot be just any type. It must be a primitive type, a Class, an Enum, another annotation, or one-dim array of these types
 
             ``
