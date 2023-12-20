@@ -1,0 +1,31 @@
+Java annotations    |
+____________________|
+
+    (!) java.lang.annotation package is not imported automatically, so it is required
+
+================
+Target
+================
+
+    @Target Used to limit the usage of annotations. For example some annotations are supposed to be used only with methods
+
+
+===============
+Retention
+===============
+
+    @Retention takes the value() of RetentionPolicy enum
+
+
+==============
+Documented
+==============
+
+    @Documented is a marker annotation
+    Just for documentation
+
+==============
+Inherited
+==============
+
+    @Inherited allows subclasses to inherit the annotations of the parent class
