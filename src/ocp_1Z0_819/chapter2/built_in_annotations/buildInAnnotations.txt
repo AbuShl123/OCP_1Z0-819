@@ -1,0 +1,26 @@
+Built-in annotations in java    |
+________________________________|
+
+
+Built-in annotations in java are not required, however they must be used properly
+
+
+
+    1. @Override - applies only to methods that are being overriden (error otherwise)
+    2. @FunctionalInterface - applies only to functional interfaces (error otherwise)
+    3. @Deprecated - can take String since() and boolean forRemoval() elements
+    4. @SuppressWarnings - has String[] value() element - ignores compiler warnings
+    5. @SafeVarargs - can be applied only to methods that cannot be overriden and contain varargs
+
+
+
+    Useful usage:
+
+        (!) If you are not sure, and you want to check whether the interface is functional,
+            you can add a @FunctionalInterface annotation to its declaration and if it compiles then it is a functional interface
+
+        (!) Same applies to @Override - it can prevent possible accidental non-overrides
+
+        (!) @Deprecated is used to notify developers not to use outdated code and instead use better alternative
+            - some classes and methods are marked @Deprecated with the purpose that developers would switch to newer implementations
+

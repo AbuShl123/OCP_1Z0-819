@@ -1,0 +1,63 @@
+__________________________________________________
+Summary
+__________________________________________________
+In this chapter, we taught you everything you need to know about annotations for the exam. Ideally, we
+also taught you how to create and use custom annotations in your daily programming life. As we
+mentioned early on, annotations are one of the most convenient tools available in the Java language.
+
+For the exam, you need to know the structure of an annotation declaration, including how to declare
+required elements, optional elements, and constant variables. You also need to know how to apply an
+annotation properly and ensure required elements have values. You should also be familiar with the two
+shorthand notations we discussed in this chapter. The first allows you to drop the elementName under
+certain conditions. The second allows you to specify a single value for an array element without the array
+braces ({}).
+
+You need to know about the various built-in annotations available in the Java language. We sorted these
+into two groups: annotations that apply to other annotations and common annotations.
+The annotationspecific annotations provide rules for how annotations are handled by the compiler, such as specifying an
+inheritance or retention policy. They can also be used to disallow certain usage, such as using a methodtargeted annotation applied to a class declaration.
+
+The second set of annotations are common ones that you should know for the exam. Many, like @Override
+and @FunctionalInterface, are quite useful and provide other developers with additional information
+about your application.
+
+__________________________________________________
+Exam Essentials
+__________________________________________________
+Be able to declare annotations with required elements, optional elements, and variables. An
+annotation is declared with the @interface type. It may include elements and public static final
+constant variables. If it does not include any elements, then it is a marker annotation. Optional
+elements are specified with a default keyword and value, while required elements are those specified
+without one.
+
+Be able to identify where annotations can be applied. An annotation is applied using the at (@)
+symbol, followed by the annotation name. Annotations must include a value for each required element
+and can be applied to types, methods, constructors, and variables. They can also be used in cast
+operations, lambda expressions, or inside type declarations.
+
+Understand how to apply an annotation without an element name. If an annotation contains an
+element named value() and does not contain any other elements that are required, then it can be used
+without the elementName. For it to be used properly, no other values may be passed.
+
+Understand how to apply an annotation with a single-element array. If one of the annotation
+elements is a primitive array and the array is passed a single value, then the annotation value may be
+written without the array braces ({}).
+
+Apply built-in annotations to other annotations. Java includes a number of annotations that apply
+to annotation declarations. The @Target annotation allows you to specify where an annotation can and
+cannot be used. The @Retention annotation allows you to specify at what level the annotation
+metadata is kept or discarded. @Documented is a marker annotation that allows you to specify whether
+annotation information is included in the generated documentation. @Inherited is another marker
+annotation that determines whether annotations are inherited from super types. The @Repeatable
+annotation allows you to list an annotation more than once on a single declaration. It requires a second
+containing type annotation to be declared.
+
+Apply common annotations to various Java types. Java includes many built-in annotations that
+apply to classes, methods, variables, and expressions. The @Override annotation is used to indicate
+that a method is overriding an inherited method. The @FunctionalInterface annotation confirms
+that an interface contains exactly one abstract method. Marking a type @Deprecated means that the
+compiler will generate a depreciation warning when it is referenced. Adding @SuppressWarnings
+with a set of values to a declaration causes the compiler to ignore the set of specified warnings.
+Adding @SafeVarargs on a constructor or private, static, or final method instructs other
+developers that no unsafe operations will be performed on its varargs parameter. While all of these
+annotations are optional, they are quite useful and improve the quality of code when used.

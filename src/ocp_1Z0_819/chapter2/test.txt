@@ -1,0 +1,25 @@
+1. E
+2. D, F
+3. B, D, E
+4. E // should be D
+5. B, C
+6. B, E, G // B is wrong
+7. A, B, C, D, E, F
+8. B, F
+9. D
+10. G
+11. C, D, F
+12. B, C, D
+13. A, D
+14. D
+15. B
+16. A, F // A is wrong
+17. E // B is missing
+18. C, D, E, F
+19. A, F
+20. D, F
+21. G
+22. F
+23. B // A is correct - about retention policy
+24. A, E
+25. C
