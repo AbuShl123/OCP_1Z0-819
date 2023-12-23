@@ -1,0 +1,15 @@
+Chapter 3 -- Generics and Collections
+___________________________________________________________________
+
+
+    The OCP exam topics covered in this chapter include following:
+
+        - Generics and Collections
+            ■ Use wrapper classes, autoboxing and autounboxing
+            ■ Create and use generic classes, methods with diamond notation and wildcards
+            ■ Describe the Collections Framework and use key collection interfaces
+            ■ Use Comparator and Comparable interfaces
+            ■ Create and use convenience methods for collections
+
+        - Java Stream API
+            ■ Use lambda expressions and method references

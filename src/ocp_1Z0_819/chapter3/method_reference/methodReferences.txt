@@ -1,0 +1,16 @@
+Using Method Reference
+______________________________________________
+
+
+    Method reference --> shorter version of lambdas
+
+        Ex: System.out::println --> prints the only single parameter
+
+
+    Method Reference types:
+        1) Static method
+        2) Instance methods on a particular instance
+        3) Instance methods on a parameter to be determined at runtime
+        4) Constructors
+
+
