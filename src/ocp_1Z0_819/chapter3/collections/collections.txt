@@ -1,0 +1,85 @@
+Collections
+_______________________
+
+
+    Common Collection interface methods:
+           [] boolean add(E element)
+           [] boolean remove(Object object)
+           [] boolean remove(int index)
+           [] boolean isEmpty()
+           [] int size()
+           [] void clear
+           [] boolean contains(Object object)
+           [] boolean removeIf(Predicate<? super E> filter)
+           [] void forEach(Consumer<? super E> action)
+
+
+--------------------------
+List implementations
+--------------------------
+
+    ■ ArrayList:
+        Elements are accessed at constant time
+        Adding or removing an element is slower than accessing an element
+
+    ■ LinkedList:
+        Implements both List and Queue.
+        Has methods to add or remove from beginning/end of the list at constant time
+        Accessing an element takes linear time - slower
+        (!) LinkedList is good to use as a Queue
+
+
+    List Factory methods
+
+        Factory methods help to quickly create a list, but you don't know the type returned --> you can assign them to List<E>
+
+        (!) Factory methods return immutable collections. They are bad for modifications!!
+        (!) Throws UnsupportedModificationException
+
+        -> Refer to ListFactoryMethods.png
+
+            [] Arrays.asList(varargs)   // allows to update existing values
+            [] List.of(varargs)
+            [] List.copyOf(Collection)
+
+
+-----------------------------
+Set implementations
+-----------------------------
+
+    ■ HashSet
+        Adding element and checking whether an element is in the Set takes constant time
+        You lose order in which you inserted the elements
+
+    ■ TreeSet
+        stored elements in sorted tree structure - sorted!
+        Adding element and checking whether an element exists take longer than with HashSet
+        elements implement Comparable interface which is used for sorting
+
+
+    Set Factory methods:
+        Set.of(varargs)
+        Set.copyOf(Collection)
+
+
+-----------------------------
+Queue implementations
+-----------------------------
+
+    -  Queues are typically used for sorting elements prior to processing them
+
+    |    queue is assumed to be FIFO (first-in, first-out)      |
+    |    stack is assumed to be LIFO (last-in, first out)       |
+
+
+    (!) In Java both stack and queue can be implemented with the Queue interface.
+
+
+    ■ LinkedList
+        in addition to being a List, a LinkedList is also a double-ended queue.
+        double-ended queues allow to insert & remove elements from both front and back of the queue
+
+        + implements both Queue and List interfaces
+        - is not as efficient as 'pure' queue
+
+        (!) ArrayDeque (short for double-ended queue) is more efficient than LinkedList
