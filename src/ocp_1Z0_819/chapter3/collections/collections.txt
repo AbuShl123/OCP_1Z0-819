@@ -83,3 +83,28 @@ Queue implementations
         - is not as efficient as 'pure' queue
 
         (!) ArrayDeque (short for double-ended queue) is more efficient than LinkedList
+
+
+
+----------------------------
+Map implementations
+----------------------------
+
+
+    Factory methods:
+        1) Map.of("key1", "value1", "key2", "value2"); // throws error at runtime, if the number of parameters is not even
+        2) Map.ofEntries(
+            Map.entry("key1", "value1")
+            Map.entry("key2", "value2")
+           )
+        3) Map.copyOf(map)
+
+
+    ■ HashMap
+        + adding and retrieving elements take constant time
+        - the order in which elements are inserted is lost
+
+    ■ TreeMap
+        stores keys in a sorted tree structure
+        + keys are always in sorted order
+        - adding and checking whether a key is present takes longer

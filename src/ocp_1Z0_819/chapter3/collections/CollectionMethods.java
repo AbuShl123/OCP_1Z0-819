@@ -20,5 +20,7 @@ public class CollectionMethods {
 		strs.removeIf(String::isEmpty);
 
 		System.out.println(strs);
+
+		System.out.println("Contains 10? --> " + numbers.contains(10));
 	}
 }
