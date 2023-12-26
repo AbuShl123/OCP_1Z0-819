@@ -1,0 +1,38 @@
+Sorting Data
+___________________________________________________
+
+======================
+Comparable
+======================
+
+        ```
+        public interface Comparable<T> {
+            int compareTo(T o);
+        }
+        ```
+
+        - any object can be Comparable
+        - Comparable is in java.lang package
+
+        compare to values:
+
+                1) Zero. When current object is equivalent to compareTo parameter obj
+                2) Positive. When current object is larger than the param one
+                3) Negative. When current object is smaller than the parma one
+
+        (!)  A natural ordering that uses compareTo() is said to be consistent with equals() if, and only if, x.equals(y) is true whenever x.compareTo(y) equals 0.
+
+
+==================
+Comparator
+==================
+
+    - Comparator is in java.util package
+
+
+===========================
+Collections with sort
+===========================
+
+    - Collections that sort data (TreeSet, TreeMap) require the object to be Comparable, otherwise ClassCastException will be thrown.
+
