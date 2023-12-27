@@ -18,6 +18,6 @@ class Enclosing {
 }
 
 // if we were to import a nested static class two ways are acceptable:
-// import java.chapter1.nested_classes.Enclosing.Nested;
-// import static java.chapter1.nested_classes.Enclosing.Nested;
+// import ocp_1Z0_819.chapter1.nested_classes.Enclosing.Nested;
+// import static ocp_1Z0_819.chapter1.nested_classes.Enclosing.Nested;
 

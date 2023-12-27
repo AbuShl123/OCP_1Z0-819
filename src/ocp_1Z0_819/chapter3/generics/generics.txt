@@ -1,0 +1,69 @@
+Generics    |
+____________|
+
+__________________________________________________________________________
+    Type Erasure          (what happens to generic classes?)
+__________________________________________________________________________
+
+        At Compile-time:
+            When applying generics to classes, at compile time the all T parameters are changed to the actual class being used
+
+        At Runtime:
+            However, at runtime, all references to T in parametrized classes are replaced to Object
+            In other words, after code compiles, all the generics are just Object types
+
+        Conclusions:
+            --> this means there is only one class file, not different copies for different parametrized types (some language work that way)
+
+            --> Type erasure - process of removing the generic syntax from the code
+
+            compiler uses relevant casts to deal with type of erased class.
+
+
+
+_______________________________________________
+What you can't do with Generic Types
+_______________________________________________
+
+
+        | Reifiable types - those types, whose information is fully available at runtime |
+
+        Non-reifiable types have some limitations.
+
+        What you can't do with generics:
+
+            1. Calling Constructor: new T() won't compile
+            2. Creating an array of generic values
+            3. Calling instanceof: List<Integer> and List<String> look the same at runtime!
+            4. Using a primitive type as a generic type parameter: only objects
+            5. Creating a static variable as a generic type parameter: type is linked to the instance of the class
+
+
+_________________________________________
+Generic Methods
+_________________________________________
+
+        We can also use generic types for methods.
+
+        Usually it is used with static methods, but it's also allowed for non-static methods
+
+        Rules:
+            <T> is placed before return type:
+                public <T> int add(List<T> list) {}
+
+
+________________________________________
+Bounded Generic Types
+________________________________________
+
+        generic wildcard types:
+
+                ? - unbounded wildcard                          (literally means 'anything')
+                ? extends type - wildcard with an upper bound   (only classes that are subclasses of the 'type' or this 'type' itself)
+                ? super type - wildcard with a lower bound      (only classes that are the parents of the 'type' or this 'type' itself)
+
+
+        Rules:
+                1) unbounded generics     are immutable (meaning we can't add elements)
+                2) upper-bounded generics are immutable (meaning we can't add elements)
+                3) lower-bounded generics are not immutable and we can modify them
