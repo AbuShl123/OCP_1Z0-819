@@ -38,6 +38,15 @@ public class MapMethods {
 		map.replaceAll((k, v) -> {return v + " or nature food";});
 
 		map.forEach((k, v) -> printf("%s=%s, ", k, v));
+
+		var map1 = new HashMap<Integer, Integer>();
+		map1.put(1, 10);
+		map1.put(2, 20);
+		map1.put(3, null);
+		map1.merge(1, 3, (a,b) -> a + b);
+		map1.merge(3, 3, (a,b) -> a + b);
+		System.out.println(map1);
+
 	}
 
 }
