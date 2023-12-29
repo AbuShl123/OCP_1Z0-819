@@ -1,0 +1,64 @@
+Built-in Functional Interfaces
+_____________________________________________________
+
+    1) Supplier
+            'supplies' value - accepts no parameters but returns something
+
+            ----> T get();
+
+    2) Consumer
+            gets one parameter but returns void. Has BiConsumer
+
+            good if you want to do something with parameters but not return anything
+
+            ----> void accept(T t)
+
+
+    3) Predicate
+            takes parameters, returns boolean. Has BiPredicate
+
+            ----> boolean test(T t);
+
+
+    4) Function
+            Takes parameters and takes return type. Has BiFunction
+
+            ----> R apply(T t);
+
+
+______________________________________
+UnaryOperator and BinaryOperator
+______________________________________
+
+    unary and binary operators are a special case of a Function (4)
+
+        ```
+        public interface UnaryOperator<T> extends Function<T, T> { }
+
+        public interface BinaryOperator<T> extends BiFunction<T, T, T> {  }
+        ```
+
+   all parameters and return types are the same type
+
+   ----> T apply(T t)
+   ----> T apply(T t1, T t2)
+
+
+
+___________________________________
+Convenience methods
+___________________________________
+
+    For Predicate and BiPredicate it's straightforward:
+            and()       --> same as &&
+            or()        --> same as ||
+            negate()    --> negates (!) the current Predicate instance
+
+
+    Consumer and BiConsumer has only:
+            andThen()   --> accepts another Consumer to perform after
+
+    Functino and BiFunctino methods:
+            andThen()   --> the same as that of Consumer's
+            compose()   --> basically opposite of andThen, i.e. takes a Function to perform before
+
