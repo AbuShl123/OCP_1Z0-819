@@ -1,0 +1,39 @@
+Streams -- Pipeline Flow                |
+________________________________________|
+
+
+
+Understanding the Pipeline Flow
+===============================
+
+    Stream pipeline is a like an assembly line in a factory. Some amount of raw material is given at the start and there are multiple continued steps each making some action on the raw material, to produce the final product at the end.
+
+    The process goes step-by-step, meaning that if the step 1 is not finished, the step 2 can't do anything, and similarly the step 3 has nothing to do until all the previous steps are completed.
+    (!) Process runs step-by-step.
+
+    Assembly lines are finite, meaning that once all the raw material is processed, the pipeline finishes.
+    (!) Finite streams have a limit. But there are also infinite streams as well.
+
+    In the stream pipeline, once the item from step 1 to sent to step 2, then the data is gone and can't come back.
+    (!) Stream uses a Lazy Evaluation. Intermediate operations are called, but not executed right away.
+
+
+    ************** Three fundamental Stream parts ****************
+
+    1) Source                       -- where the stream comes from
+    2) Intermediate operations      -- transforms the stream into another one. Intermediate operations do not run, until terminal operations completes
+    3) Terminal operation           -- actually produces a result. After the terminal operation, the stream is no longer valid
+
+
+
+    java.util.stream        <--- package where Stream<T> is located
+
+
+
+========================================================
+Stream Terminal Operation Methods
+========================================================
+
+    ■ long count()
+        determines the number of elements in a finite stream. For an infinite stream it never terminates
+

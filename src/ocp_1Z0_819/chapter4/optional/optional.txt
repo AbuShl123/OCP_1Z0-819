@@ -1,0 +1,16 @@
+Optional
+________________________
+
+    You use optional, when you want to express the absence of any value
+
+        Example:
+                - You are attending a class
+                - You teachers ask you to tell them your average grade
+                - But you didn't take any exams yet, because the classes only started
+                - 0 will be a wrong answer, because you simply have no average grade
+                ------> Use Optional.empty() instead
+
+
+        Before, developers would use a 'null' instead of Optional, but that had some shortcomings
+
+        (!) Returning Optional is a clear statement in the API that there might not be a value in there
