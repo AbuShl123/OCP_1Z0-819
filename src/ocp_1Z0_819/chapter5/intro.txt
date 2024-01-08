@@ -1,0 +1,14 @@
+Chapter 5 - Exceptions, Assertions and Localization |
+____________________________________________________|
+
+    OCP Exam Objectives Covered In This Chapter:
+
+        - Exception Handling and Assertions
+            ■ Use the try‐with‐resources construct
+            ■ Create and use custom exception classes
+            ■ Test invariants by using assertions
+
+        - Localization
+            ■ Use the Locale class
+            ■ Use resource bundles
+            ■ Format messages, dates, and numbers with Java

@@ -1,0 +1,61 @@
+Assertions  |
+____________|
+
+========================
+Introduction
+========================
+
+    Definition:
+    --> Assertions are booleans expressions, that programmer puts at some point of the code, where it expects something to be true
+    Assertions may contain an optional message and may be disabled or enabled
+
+    PURPOSE:
+        assertions are used for debugging purposes. They are usually turned off for production environment
+
+    (!) If assertion fails, the AssertionError is thrown. It's an error meaning it is fatal
+
+
+    ||        Assertions vs Unit Tests:
+    ||            Many developers use various unit testing frameworks, such as JUnit.
+    ||
+    ||            1) While there are some similarities, assertions are used to verify internal state of a program
+    ||               while Unit Tests are most frequently used to verify a behaviour.
+    ||            2) Unit tests are equipped with lots of features and possibilities, so it is better to use unit tests in professional experience
+
+
+    Assertion outcomes:
+        1) If assertions are disabled, Java skips the assertion and goes on in the code
+        2) If assertions are enabled and the boolean expression is true, then our assertion has been validated
+           and nothing happens. The program continues to execute in its normal manner.
+        3) If assertions are enabled and the boolean expression is false, then our assertion is invalid and an
+           AssertionError is thrown.
+
+    Assertion rules:
+        Assertions should never alter the outcomes
+
+        ` int a = 10;
+          assert ++a == 11; // BAD CODING `
+
+====================================
+Enabling and Disabling assertions
+====================================
+
+    (!) By default assertions are disabled
+
+    - To enable assertions use -ea or -enableassertions flag:
+      To disable use -da or -disableassertions flag
+
+            java -ea Rectangle.java
+
+
+    - It is also possible to enable assertions only for specific directories:
+      Ellipsis (...) means any class inside 'demos' package or subpackages.
+
+            java -ea:com.demos... my.programs.Main
+
+            java -ea:com.demos.TestColors my.programs.Main
+
+
+    - You can disable assertions for some classes while enabling for others:
+
+        java -ea:com.demos... -da:com.demos.TestColors my.programs.Main

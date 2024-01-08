@@ -1,0 +1,37 @@
+Exceptions  |
+____________|
+
+    It is possible to handle exceptions using try-catch block
+
+    Exceptions have two types:
+
+        1) One that inherit from RuntimeException --> Unchecked Exceptions
+        2) One that inherit from Exception only --> Checked Exceptions
+
+
+
+============================
+Try-with-resources
+============================
+
+    1) When opening a file, then after working with it, it has to be closed
+
+            (!) Try-with-resources statements automatically close all opened instances upon try-block finish
+
+    2) Try-with-resources means, that you will create instances inside the: try(*here*)
+        - multiple instances are separated by semi-colon ;
+
+            (!) try‐with‐resources statements require resources that implement the AutoCloseable interface
+
+            (!) try-with-resources does NOT require a catch block
+
+    3) AutoCloseable interface has one abstract method - `public void close() throws Exception;` to override
+       - Closeable interface inherits AutoCloseable but close() method throws IOException
+
+
+    -------------------
+    Writing resources
+    -------------------
+
+        (!) Resources can be written before the try block, but they must be final or effectively final.
+            - it is bad idea though
