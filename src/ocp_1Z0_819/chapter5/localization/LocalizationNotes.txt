@@ -1,0 +1,18 @@
+Localization    |
+________________|
+
+Locales
+===================================
+
+    Locales is about languages and countries.
+
+        Ex: en_US
+        en -> language code (always lowercase)
+        US -> country code  (always uppercase)
+
+    Short rules:
+        1) language is always lowercase - country is always uppercase
+        2) language code is required, country code is optional
+        3) the format is: lang_COUNTRY (Ex: ru_RU)
+
+
