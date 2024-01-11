@@ -4,8 +4,7 @@ ________________|
 Locales
 ===================================
 
-    Locales is about languages and countries.
-
+    Locale is about languages and countries.
         Ex: en_US
         en -> language code (always lowercase)
         US -> country code  (always uppercase)
@@ -15,4 +14,55 @@ Locales
         2) language code is required, country code is optional
         3) the format is: lang_COUNTRY (Ex: ru_RU)
 
+    java.util.Locale    <---- Locales comes from
+
+
+==================================
+Date and Time
+==================================
+
+    java.time   <---- Date and Time come from
+
+    java.util.format    <---- DateTimeFormatter comes from
+
+==================================
+Resource Bundle
+==================================
+
+    Resource Bundles are just .properties files, but instead of column (:) you put equal sign (=) to separate keys and values:
+
+        key=value
+
+    Usually resource bundles are separated to several different locales
+
+        (!) ORDERING:
+                Assume the requested locale is fr_FR and the default is en_US.
+                The JVM will provide data from an en_US if and only if there is no matching fr_FR or fr resource bundles
+
+
+    Syntax:
+        ResourceBundle.getBundle("string");
+        ResourceBundle.getBundle("string", locale);
+
+        instance.getString("key");
+
+=================================
+MessageFormat
+=================================
+
+    MessageFormat allows to format a string text by inputting several values inside of the braces.
+
+    {1} {2} are usually the order in which variables do appear
+
+    **** java.text       <---- Comes from here
+
+    Syntax:
+        MessageFormat.format(messageToFormat, varargs);
+
+
+=================================
+Properties class
+=================================
+
+    Properties class is the same as HashMap with an exception that it has both keys and values as String types.
 
